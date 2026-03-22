@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b1120;
+  color: #e5e7eb;
+}
+h2, h3 {
+  font-weight: 600;
+}
+
+p, span {
+  font-weight: 400;
+}
+/* Layout */
+.app {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #0f172a;
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Main area */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+   height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px; 
+  margin-top: 0;
+}
+
+/* Cards */
+.card {
+  background: #111827;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 20px;
+}
+
+/* Dashboard layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+/* Typography */
+.card h3 {
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  flex: 1;
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  min-width: 0;
+}
+
+/* Button (SUBTLE gradient only) */
+.btn {
+  background: linear-gradient(135deg, #6d28d9, #4f46e5);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;  /* button stays compact */
+}
+
+/* Expense list */
+.expense-item {
+  display: flex;
+  justify-content: space-between;  /* 🔥 key fix */
+  align-items: center;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: #020617;
+  border-bottom: 1px solid rgba(255,255,255,0.1); /* subtle separation */
+
+  
+}
+
+.expense-item .title {
+  font-family: 'Inter', sans-serif; 
+  font-weight: 500;                 
+  font-size: 15px;                  
+  color: #f1f5f9;                   
+  margin-right: 10px;               
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.expense {
+  color: #ef4444;
+  /* font-weight: 500; */
+}
+
+.income {
+  color: #22c55e;
+  /* font-weight: 500; */
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  color: white;
+}
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  
+}
+
+.bottom-section .card {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;            
+  padding: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.menu li:hover {
+ background: rgba(168, 85, 247, 0.15);
+}
+
+.menu li.active {
+  background: linear-gradient(90deg, #43255f, #2e1755); /* purple gradient */
+  color: white;
+}
+
+.menu li span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: #60a5fa;  /* soft blue */
+  transition: 0.2s;
+}
+
+.edit-icon:hover {
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #f87171;  /* soft red */
+  transition: 0.2s;
+}
+
+.delete-icon:hover {
+  color: #ef4444;
+  transform: scale(1.1);
+}
